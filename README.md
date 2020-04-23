@@ -10,7 +10,11 @@
 
 
 ### 部分作业心得——截至2020年4月23日
-希望大家多多自己测试，掌握自己debug的能力。这一点非常重要。顺便给告诉大家ICS课上的两条debug准则——**机器一定是对的；没有测试过的代码一定是错的。**
+希望大家多多自己测试，掌握自己debug的能力。这一点非常重要。顺便给告诉大家ICS课上的两条debug准则:
+
+**机器一定是对的；**
+
+**没有测试过的代码一定是错的。**
 
 
 有关Python代码，大家可以多多参考UCB的CS61A上的相关文档，在此指路：[CS61A_Debug]:https://cs61a.org/articles/debugging.html 和 [CS61A_composition]:https://cs61a.org/articles/composition.html
