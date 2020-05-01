@@ -18,11 +18,11 @@ public class ReverseString {
 	 * @return 倒置结果
 	 */
 	public static String reverseString(String s){
-		char[] charlst = s.toCharArray();
-		String ans = "";
-		for(int i = charlst.length - 1; i>=0; i--){
-			ans += charlst[i];
+		char[] string = s.toCharArray();
+		StringBuilder ans = new StringBuilder();
+		for(int i = string.length-1; i >= 0; i--){
+			ans.append(string[i]);
 		}
-		return ans;
+		return ans.toString();
 	}
 }
