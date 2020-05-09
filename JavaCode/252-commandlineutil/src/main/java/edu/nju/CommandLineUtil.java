@@ -29,30 +29,20 @@ public class CommandLineUtil {
         try {
             // parse the command line arguments
             CommandLine line = parser.parse( options, args );
-
+            String[] s = line.getArgs();
             if( line.hasOption( "h" ) ) {
                 // print the value of block-size
                 System.out.println( "help" );
+            } else if (s.length == 0){
+                System.out.println(WRONG_MESSAGE);
             } else {
-                int flg = 0;
-                for(String arg : args){
-                    if (arg.equals("arg0")) {
-                        flg = 1;
-                        break;
-                    }
+                if( line.hasOption( "p" ) ) {
+                    // print the value of block-size
+                    System.out.println( line.getOptionValue( "p" ) );
                 }
-                if(flg == 1){
-                    if( line.hasOption( "p" ) ) {
-                        // print the value of block-size
-                        System.out.println( line.getOptionValue( "p" ) );
-                    }
-                    if( line.hasOption( "s" ) ) {
-                        sideEffect = true;
-                    }
-                }else{
-                    System.out.println(WRONG_MESSAGE);
+                if( line.hasOption( "s" ) ) {
+                    sideEffect = true;
                 }
-
             }
 
         }
